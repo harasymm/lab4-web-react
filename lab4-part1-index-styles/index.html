@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV / Резюме</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="themeToggle" class="theme-toggle">
+         Change Theme / Змінити тему
+    </button>
     <div class="resume-wrapper">
         <div class="resume-sheet">
             <h1 class="title">CV / Резюме</h1>
@@ -60,8 +64,12 @@
             <li class="social-link"><a href="https://www.twitter.com/exemple/">Twitter</a></li>
         </ul>     
     </section>  
+    <section class="comments-section">
+        <h2>Reviews from previous employers / Відгуки попередніх роботодавців</h2>
+        <div id="comments"></div>
+        </section>
   </div>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <img src="images/iktalogo.jpg" alt="IKTA Logo" class="footer-logo">
         <div class="footer-content">
             <h2 class="footer-title">Lab3-web-react. LPNU WebDevelopment</h2>
@@ -72,6 +80,22 @@
         <img src="images/arton141.png" alt="LPNU Logo" class="footer-logo2">
     </footer>
 </div> 
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModal" class="close-btn">x</button>
+
+    <h2>Feedback Form / Форма зворотного зв’язку</h2>
+
+    <form action="https://formspree.io/f/xojbadwl" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Feedback</button>
+    </form>
+  </div>
+</div>
    
 </body>
  
